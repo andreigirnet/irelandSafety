@@ -33,18 +33,9 @@
 
 <meta name="google-site-verification" content="LzejX2Dd-6oj32ZQRq5981tz74cTlalGjMXEwe6ZeiI" />
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KS561D9NVS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KS561D9NVS');
-</script>
 
 </head>
-<body x-data="app()">    
+<body x-data="app()">
 
 @include("frontIncludes/hamburger")
 @include("frontIncludes/responsiveNav")
@@ -71,7 +62,7 @@
             </div>
         </div>
     </div>
-    
+
 <script>
 window.replainSettings = { id: '9f43da79-85c0-4dd0-9467-72fe6bdf1bff' };
 (function(u){var s=document.createElement('script');s.async=true;s.src=u;

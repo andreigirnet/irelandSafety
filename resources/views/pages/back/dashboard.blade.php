@@ -19,14 +19,14 @@
                 <tbody>
                 @foreach($employees as $employee)
                     <tr>
-                        <td class="hiddenRows">
-                            <form action="{{route('delete.employer', $employee->relationId)}}" method="POST"> @csrf @method('DELETE')<button class="submitDeleteOrder"><img class="deleteFormOrders" src="{{asset('images/icons/bin.png')}}" alt=""></button></form>
-
+                        <td class="hiddenRows" style="display: flex; align-items: center; column-gap: 5px">
+{{--                            <form action="{{route('delete.employer', $employee->relationId)}}" method="POST"> @csrf @method('DELETE')<button class="submitDeleteOrder"><img class="deleteFormOrders" src="{{asset('images/icons/bin.png')}}" alt=""></button></form>--}}
+                            <a href="{{route('employer.employee', $employee->id)}}" class="editLink"><img src="{{asset('images/icons/info.png')}}" alt=""></a>
                             {{--                                <a href="{{route('employer.info', $employee->employee)}}" class="editLink"><img src="{{asset('images/icons/info.png')}}" alt=""></a>--}}
                         </td>
-                        <td class="hiddenRows">{{$employee->created_at}}</td>
-                        <td>{{$employee->name}}</td>
-                        <td>{{$employee->email}}</td>
+                        <td class="hiddenRows blackText">{{$employee->created_at}}</td>
+                        <td class="blackText">{{$employee->name}}</td>
+                        <td class="blackText">{{$employee->email}}</td>
                         @if($employee->assigned)
                             <td><img class="invoiceLink" src="{{asset('images/icons/assign.png')}}" alt=""></td>
                         @else

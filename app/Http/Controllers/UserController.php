@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Ip;
+use App\Models\Product;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -96,10 +97,11 @@ class UserController extends Controller
 
     public function show(string $id)
     {
+        $products = Product::all();
         $user = DB::select("SELECT *, users.id FROM users LEFT JOIN certificates ON users.id=certificates.user_id WHERE users.id=" . $id);
         $packages = DB::select("SELECT p.id as package_id, p.created_at as created_at,p.course_name as course_name, p.status as status, c.id as certificate_id, c.expiration_date as expiration_date FROM packages as p LEFT JOIN certificates as c ON p.id = c.package_id WHERE p.user_id=" . $id);
         $employees =  DB::select("SELECT *, company_employee.id as relationId FROM users JOIN company_employee ON users.id = company_employee.employee WHERE company_employee.company=" . $id);
-        return view('pages.admin.users.info')->with('user', $user[0])->with('employees',$employees)->with('packages',$packages);
+        return view('pages.admin.users.info', compact('products'))->with('user', $user[0])->with('employees',$employees)->with('packages',$packages);
     }
     public function showPackages(string $id, Request $request)
     {

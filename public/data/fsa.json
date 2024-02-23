@@ -1,0 +1,465 @@
+{
+    "correctAnswers": [2, 2, 2, 3, 1, 2, 2, 2, 2, 2, 2, 3, 2, 2, 3, 3, 2, 2, 3, 2],
+    "english": {
+        "stage_1": {
+            "slide_1": {
+                "img": "/images/allCourse/FSA-0-0.jpg"
+            },
+            "slide_2": {
+                "img": "/images/allCourse/FSA-1-1.jpg"
+            },
+            "slide_3": {
+                "img": "/images/allCourse/FSA-1-2.jpg"
+            },
+            "slide_4": {
+                "img": "/images/allCourse/FSA-1-3.jpg"
+            },
+            "slide_5": {
+                "img": "/images/allCourse/FSA-1-4.jpg"
+            },
+            "slide_6": {
+                "img": "/images/allCourse/FSA-1-5.jpg"
+            },
+            "slide_7": {
+                "img": "/images/allCourse/FSA-1-6.jpg"
+            },
+            "slide_8": {
+                "img": "/images/allCourse/FSA-1-7.jpg"
+            },
+            "slide_9": {
+                "img": "/images/allCourse/FSA-1-8.jpg"
+            },
+            "slide_10": {
+                "img": "/images/allCourse/FSA-1-9.jpg"
+            },
+            "slide_11": {
+                "img": "/images/allCourse/FSA-1-10.jpg"
+            },
+            "slide_12": {
+                "img": "/images/allCourse/FSA-1-11.jpg"
+            },
+            "slide_13": {
+                "img": "/images/allCourse/FSA-1-12.jpg"
+            },
+            "slide_14": {
+                "img": "/images/allCourse/FSA-1-13.jpg"
+            },
+            "slide_15": {
+                "img": "/images/allCourse/FSA-1-14.jpg"
+            },
+            "slide_16": {
+                "img": "/images/allCourse/FSA-1-15.jpg"
+            },
+            "slide_17": {
+                "img": "/images/allCourse/FSA-1-16.jpg"
+            },
+            "slide_18": {
+                "img": "/images/allCourse/FSA-1-17.jpg"
+            }
+        },
+        "stage_2": {
+            "slide_1": {
+                "img": "/images/allCourse/FSA-2-1.jpg"
+            },
+            "slide_2": {
+                "img": "/images/allCourse/FSA-2-2.jpg"
+            },
+            "slide_3": {
+                "img": "/images/allCourse/FSA-2-3.jpg"
+            },
+            "slide_4": {
+                "img": "/images/allCourse/FSA-2-4.jpg"
+            },
+            "slide_5": {
+                "img": "/images/allCourse/FSA-2-5.jpg"
+            },
+            "slide_6": {
+                "img": "/images/allCourse/FSA-2-6.jpg"
+            },
+            "slide_7": {
+                "img": "/images/allCourse/FSA-2-7.jpg"
+            },
+            "slide_8": {
+                "img": "/images/allCourse/FSA-2-8.jpg"
+            },
+            "slide_9": {
+                "img": "/images/allCourse/FSA-2-9.jpg"
+            },
+            "slide_10": {
+                "img": "/images/allCourse/FSA-2-10.jpg"
+            },
+            "slide_11": {
+                "img": "/images/allCourse/FSA-2-11.jpg"
+            },
+            "slide_12": {
+                "img": "/images/allCourse/FSA-2-12.jpg"
+            },
+            "slide_13": {
+                "img": "/images/allCourse/FSA-2-13.jpg"
+            },
+            "slide_14": {
+                "img": "/images/allCourse/FSA-2-14.jpg"
+            },
+            "slide_15": {
+                "img": "/images/allCourse/FSA-2-15.jpg"
+            },
+            "slide_16": {
+                "img": "/images/allCourse/FSA-2-16.jpg"
+            }
+        },
+        "stage_3": {
+            "slide_1": {
+                "img": "/images/allCourse/FSA-3-1.jpg"
+            },
+            "slide_2": {
+                "img": "/images/allCourse/FSA-3-2.jpg"
+            },
+            "slide_3": {
+                "img": "/images/allCourse/FSA-3-3.jpg"
+            },
+            "slide_4": {
+                "img": "/images/allCourse/FSA-3-4.jpg"
+            },
+            "slide_5": {
+                "img": "/images/allCourse/FSA-3-5.jpg"
+            },
+            "slide_6": {
+                "img": "/images/allCourse/FSA-3-6.jpg"
+            },
+            "slide_7": {
+                "img": "/images/allCourse/FSA-3-7.jpg"
+            },
+            "slide_8": {
+                "img": "/images/allCourse/FSA-3-8.jpg"
+            },
+            "slide_9": {
+                "img": "/images/allCourse/FSA-3-9.jpg"
+            },
+            "slide_10": {
+                "img": "/images/allCourse/FSA-3-10.jpg"
+            },
+            "slide_11": {
+                "img": "/images/allCourse/FSA-3-11.jpg"
+            },
+            "slide_12": {
+                "img": "/images/allCourse/FSA-3-12.jpg"
+            },
+            "slide_13": {
+                "img": "/images/allCourse/FSA-3-13.jpg"
+            },
+            "slide_14": {
+                "img": "/images/allCourse/FSA-3-14.jpg"
+            },
+            "slide_15": {
+                "img": "/images/allCourse/FSA-3-15.jpg"
+            },
+            "slide_16": {
+                "img": "/images/allCourse/FSA-3-16.jpg"
+            },
+            "slide_17": {
+                "img": "/images/allCourse/FSA-3-17.jpg"
+            },
+            "slide_18": {
+                "img": "/images/allCourse/FSA-3-18.jpg"
+            },
+            "slide_19": {
+                "img": "/images/allCourse/FSA-3-19.jpg"
+            },
+            "slide_20": {
+                "img": "/images/allCourse/FSA-3-20.jpg"
+            },
+            "slide_21": {
+                "img": "/images/allCourse/FSA-3-21.jpg"
+            }
+        },
+        "stage_4": {
+            "slide_1": {
+                "img": "/images/allCourse/FSA-4-1.jpg"
+            },
+            "slide_2": {
+                "img": "/images/allCourse/FSA-4-2.jpg"
+            },
+            "slide_3": {
+                "img": "/images/allCourse/FSA-4-3.jpg"
+            },
+            "slide_4": {
+                "img": "/images/allCourse/FSA-4-4.jpg"
+            },
+            "slide_5": {
+                "img": "/images/allCourse/FSA-4-5.jpg"
+            },
+            "slide_6": {
+                "img": "/images/allCourse/FSA-4-6.jpg"
+            },
+            "slide_7": {
+                "img": "/images/allCourse/FSA-4-7.jpg"
+            },
+            "slide_8": {
+                "img": "/images/allCourse/FSA-4-8.jpg"
+            },
+            "slide_9": {
+                "img": "/images/allCourse/FSA-4-9.jpg"
+            },
+            "slide_10": {
+                "img": "/images/allCourse/FSA-4-10.jpg"
+            },
+            "slide_11": {
+                "img": "/images/allCourse/FSA-4-11.jpg"
+            },
+            "slide_12": {
+                "img": "/images/allCourse/FSA-4-12.jpg"
+            },
+            "slide_13": {
+                "img": "/images/allCourse/FSA-4-13.jpg"
+            },
+            "slide_14": {
+                "img": "/images/allCourse/FSA-4-14.jpg"
+            },
+            "slide_15": {
+                "img": "/images/allCourse/FSA-4-15.jpg"
+            },
+            "slide_16": {
+                "img": "/images/allCourse/FSA-4-16.jpg"
+            },
+            "slide_17": {
+                "img": "/images/allCourse/FSA-4-17.jpg"
+            },
+            "slide_18": {
+                "img": "/images/allCourse/FSA-4-18.jpg"
+            },
+            "slide_19": {
+                "img": "/images/allCourse/FSA-4-19.jpg"
+            }
+        },
+        "test": {
+            "slide_0": {
+                "img" : "/images/curs/step4/test.webp",
+                "title": "Now you will have to pass a Test",
+                "answer": "",
+                "content": "You must answer 17 from 20 questions in order to get the certificate. Please click next slide to start",
+                "bullets": [
+                ]
+            },
+            "slide_1": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What is the first step to take in case of a fire emergency?",
+                "answer": "b. Evacuate immediately",
+                "content": "",
+                "bullets": [
+                    "a. Call a friend",
+                    "b. Evacuate immediately",
+                    "c. Take a nap"
+                ]
+            },
+            "slide_2": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What is the purpose of a fire extinguisher?",
+                "answer": "b. To put out small fires",
+                "content": "",
+                "bullets": [
+                    "a. To cook food",
+                    "b. To put out small fires",
+                    "c. To charge your phone"
+                ]
+            },
+            "slide_3": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What should you do if your clothes catch fire?",
+                "answer": "b. Stop, drop, and roll",
+                "content": "",
+                "bullets": [
+                    "a. Run around in panic",
+                    "b. Stop, drop, and roll",
+                    "c. Take a selfie"
+                ]
+            },
+            "slide_4": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What is the recommended way to test a doorknob for heat during a fire?",
+                "answer": "c. Use the back of your hand",
+                "content": "",
+                "bullets": [
+                    "a. Use your bare hands",
+                    "b. Kick the door",
+                    "c. Use the back of your hand"
+                ]
+            },
+            "slide_5": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "In a fire emergency, what does the acronym “PASS” stand for when using a fire extinguisher?",
+                "answer": "a. Pull, Aim, Squeeze, Sweep",
+                "content": "",
+                "bullets": [
+                    "a. Pull, Aim, Squeeze, Sweep",
+                    "b. Play, Act, Shout, Stop",
+                    "c. Push, Attach, Slide, Switch"
+                ]
+            },
+            "slide_6": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "Where should you assemble during a fire drill?",
+                "answer": "b. In the parking lot or designated area",
+                "content": "",
+                "bullets": [
+                    "a. In the elevator",
+                    "b. In the parking lot or designated area",
+                    "c. In your office"
+                ]
+            },
+            "slide_7": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What is the primary purpose of a smoke alarm?",
+                "answer": "b. To make a loud noise",
+                "content": "",
+                "bullets": [
+                    "a. To detect carbon monoxide",
+                    "b. To make a loud noise",
+                    "c. To play music"
+                ]
+            },
+            "slide_8": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What is the main cause of kitchen fires?",
+                "answer": "b. Leaving cooking unattended",
+                "content": "",
+                "bullets": [
+                    "a. Cooking with too many spices",
+                    "b. Leaving cooking unattended",
+                    "c. Cooking for too long"
+                ]
+            },
+            "slide_9": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What should you do if you encounter smoke while trying to escape a building during a fire?",
+                "answer": "c. Crawl under it",
+                "content": "",
+                "bullets": [
+                    "a. Walk through it",
+                    "b. Crawl under it",
+                    "c. Jump over it"
+                ]
+            },
+            "slide_10": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What is the purpose of an emergency exit?",
+                "answer": "b. To exit the building safely during emergencies",
+                "content": "",
+                "bullets": [
+                    "a. To exit the building quickly",
+                    "b. To exit the building safely during emergencies",
+                    "c. To take a shortcut"
+                ]
+            },
+            "slide_11": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What is the importance of having an emergency evacuation plan?",
+                "answer": "b. To have a plan for fire emergencies",
+                "content": "",
+                "bullets": [
+                    "a. To have a plan for family vacations",
+                    "b. To have a plan for fire emergencies",
+                    "c. To know the fastest route to work"
+                ]
+            },
+            "slide_12": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What is the recommended method for alerting others about a fire in a public place?",
+                "answer": "c. Activate the fire alarm and call 999/112",
+                "content": "",
+                "bullets": [
+                    "a. Post it on social media",
+                    "b. Yell loudly",
+                    "c. Activate the fire alarm and call 999/112"
+                ]
+            },
+            "slide_13": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What is the purpose of fire drills?",
+                "answer": "b. To practice emergency procedures",
+                "content": "",
+                "bullets": [
+                    "a. To waste time",
+                    "b. To practice emergency procedures",
+                    "c. To play games"
+                ]
+            },
+            "slide_14": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What should be done if someone is unable to evacuate a building during a fire?",
+                "answer": "b. Call for help and wait for assistance",
+                "content": "",
+                "bullets": [
+                    "a. Leave them behind",
+                    "b. Call for help and wait for assistance",
+                    "c. Take a rest"
+                ]
+            },
+            "slide_15": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What is the recommended way to use stairs during a fire evacuation?",
+                "answer": "c. Walk calmly down the stairs",
+                "content": "",
+                "bullets": [
+                    "a. Run down the stairs",
+                    "b. Use the elevator",
+                    "c. Walk calmly down the stairs"
+                ]
+            },
+            "slide_16": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "How often should you check and replace smoke alarm batteries?",
+                "answer": "c. Annually",
+                "content": "",
+                "bullets": [
+                    "a. Every month",
+                    "b. Every 6 months",
+                    "c. Annually"
+                ]
+            },
+            "slide_17": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What is the role of a Fire Warden?",
+                "answer": "b. To assist with fire drills and evacuations",
+                "content": "",
+                "bullets": [
+                    "a. To start fires",
+                    "b. To assist with fire drills and evacuations",
+                    "c. To cook for the office"
+                ]
+            },
+            "slide_18": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What is the purpose of fire safety signage?",
+                "answer": "b. To provide information about fire hazards and escape routes",
+                "content": "",
+                "bullets": [
+                    "a. To decorate the walls",
+                    "b. To provide information about fire hazards and escape routes",
+                    "c. To confuse people"
+                ]
+            },
+            "slide_19": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "In the event of a fire, when should you use an elevator?",
+                "answer": "c. Never",
+                "content": "",
+                "bullets": [
+                    "a. Always",
+                    "b. Only during a fire drill",
+                    "c. Never"
+                ]
+            },
+            "slide_20": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What is the importance of having a designated meeting point during a fire evacuation?",
+                "answer": "b. To reunite with others and account for everyone’s safety",
+                "content": "",
+                "bullets": [
+                    "a. To have a picnic",
+                    "b. To reunite with others and account for everyone’s safety",
+                    "c. To have a chat with your colleagues"
+                ]
+            }
+        }
+    }
+}

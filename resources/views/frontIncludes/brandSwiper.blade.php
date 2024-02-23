@@ -32,6 +32,6 @@
 </div>
 <div class="webman">
     <p style="color: white; font-size: 18px">
-        Copyright © 2016-2024 Irish-ManualHandling.com | Safety Ireland Ltd | Email: info@irish-manualhandling.com
+        Copyright © 2016-2024 Ireland-SafetyTraining.com | Safety Ireland Ltd | Email: info@Ireland-SafetyTraining.com
     </p>
 </div>

@@ -71,9 +71,9 @@
             </td>
             <td align="right" style="width: 40%;">
                 <h3 style="margin-left: 50px">Ireland</h3>
-                <h3 style="margin-left: 40px">Irish Manual Handling Company</h3>
+                <h3 style="margin-left: 40px">Ireland Safety Training Company</h3>
                 <pre>
-                    www.Irish-ManualHandling.com
+                    www.Ireland-SafetyTraining.com
                     19 Montpelier Hill
                     Arbour Hill
                     Stoneybatter, Dublin
@@ -87,7 +87,7 @@
 <br/>
 <div class="invoice">
     <h3>Invoice id: #{{$order['id']}}</h3>
-    <table width="100%">
+    <table style="width: 100%">
         <thead>
         <tr style="font-size: 17px">
             <td>Description</td>
@@ -97,7 +97,7 @@
         </thead>
         <tbody>
         <tr style="font-size: 17px">
-            <td>{{$order['product_name']}}</td>
+            <td style="width:65%">{{$order['product_name']}}</td>
             <td>1</td>
             <td align="left">€ {{$order['paid']}}</td>
         </tr>

@@ -1,0 +1,469 @@
+{
+    "correctAnswers": [3, 1, 3, 3, 3, 1, 3, 1, 3, 2, 3, 1, 1, 1, 2, 2, 1, 3, 1, 3],
+    "english": {
+        "stage_1": {
+            "slide_1": { "img": "/images/allCourse/WFA-0-0.jpg" },
+            "slide_2": { "img": "/images/allCourse/WFA-0-1.jpg" },
+            "slide_3": { "img": "/images/allCourse/WFA-0-2.jpg" },
+            "slide_4": { "img": "/images/allCourse/WFA-1-1.jpg" },
+            "slide_5": { "img": "/images/allCourse/WFA-1-2.jpg" },
+            "slide_6": { "img": "/images/allCourse/WFA-1-3.jpg" },
+            "slide_7": { "img": "/images/allCourse/WFA-1-4.jpg" },
+            "slide_8": { "img": "/images/allCourse/WFA-1-5.jpg" },
+            "slide_9": { "img": "/images/allCourse/WFA-1-6.jpg" },
+            "slide_10": { "img": "/images/allCourse/WFA-1-7.jpg" },
+            "slide_11": { "img": "/images/allCourse/WFA-1-8.jpg" },
+            "slide_12": { "img": "/images/allCourse/WFA-1-9.jpg" },
+            "slide_13": { "img": "/images/allCourse/WFA-1-10.jpg" },
+            "slide_14": { "img": "/images/allCourse/WFA-1-11.jpg" },
+            "slide_15": { "img": "/images/allCourse/WFA-1-12.jpg" },
+            "slide_16": { "img": "/images/allCourse/WFA-1-13.jpg" },
+            "slide_17": { "img": "/images/allCourse/WFA-1-14.jpg" }
+        },
+        "stage_2": {
+            "slide_1": {
+                "img": "/images/allCourse/WFA-2-1.jpg"
+            },
+            "slide_2": {
+                "img": "/images/allCourse/WFA-2-2.jpg"
+            },
+            "slide_3": {
+                "img": "/images/allCourse/WFA-2-3.jpg"
+            },
+            "slide_4": {
+                "img": "/images/allCourse/WFA-2-4.jpg"
+            },
+            "slide_5": {
+                "img": "/images/allCourse/WFA-2-5.jpg"
+            },
+            "slide_6": {
+                "img": "/images/allCourse/WFA-2-6.jpg"
+            },
+            "slide_7": {
+                "img": "/images/allCourse/WFA-2-7.jpg"
+            },
+            "slide_8": {
+                "img": "/images/allCourse/WFA-2-8.jpg"
+            },
+            "slide_9": {
+                "img": "/images/allCourse/WFA-2-9.jpg"
+            },
+            "slide_10": {
+                "img": "/images/allCourse/WFA-2-10.jpg"
+            },
+            "slide_11": {
+                "img": "/images/allCourse/WFA-2-11.jpg"
+            },
+            "slide_12": {
+                "img": "/images/allCourse/WFA-2-12.jpg"
+            },
+            "slide_13": {
+                "img": "/images/allCourse/WFA-2-13.jpg"
+            },
+            "slide_14": {
+                "img": "/images/allCourse/WFA-2-14.jpg"
+            },
+            "slide_15": {
+                "img": "/images/allCourse/WFA-2-15.jpg"
+            }
+        },
+        "stage_3": {
+            "slide_1": {
+                "img": "/images/allCourse/WFA-3-1.jpg"
+            },
+            "slide_2": {
+                "img": "/images/allCourse/WFA-3-2.jpg"
+            },
+            "slide_3": {
+                "img": "/images/allCourse/WFA-3-3.jpg"
+            },
+            "slide_4": {
+                "img": "/images/allCourse/WFA-3-4.jpg"
+            },
+            "slide_5": {
+                "img": "/images/allCourse/WFA-3-5.jpg"
+            },
+            "slide_6": {
+                "img": "/images/allCourse/WFA-3-6.jpg"
+            },
+            "slide_7": {
+                "img": "/images/allCourse/WFA-3-7.jpg"
+            },
+            "slide_8": {
+                "img": "/images/allCourse/WFA-3-8.jpg"
+            },
+            "slide_9": {
+                "img": "/images/allCourse/WFA-3-9.jpg"
+            },
+            "slide_10": {
+                "img": "/images/allCourse/WFA-3-10.jpg"
+            },
+            "slide_11": {
+                "img": "/images/allCourse/WFA-3-11.jpg"
+            },
+            "slide_12": {
+                "img": "/images/allCourse/WFA-3-12.jpg"
+            },
+            "slide_13": {
+                "img": "/images/allCourse/WFA-3-13.jpg"
+            },
+            "slide_14": {
+                "img": "/images/allCourse/WFA-3-14.jpg"
+            },
+            "slide_15": {
+                "img": "/images/allCourse/WFA-3-15.jpg"
+            },
+            "slide_16": {
+                "img": "/images/allCourse/WFA-3-16.jpg"
+            }
+        },
+        "stage_4": {
+            "slide_1": {
+                "img": "/images/allCourse/WFA-4-1.jpg"
+            },
+            "slide_2": {
+                "img": "/images/allCourse/WFA-4-2.jpg"
+            },
+            "slide_3": {
+                "img": "/images/allCourse/WFA-4-3.jpg"
+            },
+            "slide_4": {
+                "img": "/images/allCourse/WFA-4-4.jpg"
+            },
+            "slide_5": {
+                "img": "/images/allCourse/WFA-4-5.jpg"
+            },
+            "slide_6": {
+                "img": "/images/allCourse/WFA-4-6.jpg"
+            },
+            "slide_7": {
+                "img": "/images/allCourse/WFA-4-7.jpg"
+            },
+            "slide_8": {
+                "img": "/images/allCourse/WFA-4-8.jpg"
+            },
+            "slide_9": {
+                "img": "/images/allCourse/WFA-4-9.jpg"
+            },
+            "slide_10": {
+                "img": "/images/allCourse/WFA-4-10.jpg"
+            },
+            "slide_11": {
+                "img": "/images/allCourse/WFA-4-11.jpg"
+            }
+        },
+        "stage_5": {
+            "slide_1": {
+                "img": "/images/allCourse/WFA-5-1.jpg"
+            },
+            "slide_2": {
+                "img": "/images/allCourse/WFA-5-2.jpg"
+            },
+            "slide_3": {
+                "img": "/images/allCourse/WFA-5-3.jpg"
+            },
+            "slide_4": {
+                "img": "/images/allCourse/WFA-5-4.jpg"
+            },
+            "slide_5": {
+                "img": "/images/allCourse/WFA-5-5.jpg"
+            },
+            "slide_6": {
+                "img": "/images/allCourse/WFA-5-6.jpg"
+            },
+            "slide_7": {
+                "img": "/images/allCourse/WFA-5-7.jpg"
+            },
+            "slide_8": {
+                "img": "/images/allCourse/WFA-5-8.jpg"
+            },
+            "slide_9": {
+                "img": "/images/allCourse/WFA-5-9.jpg"
+            },
+            "slide_10": {
+                "img": "/images/allCourse/WFA-5-10.jpg"
+            },
+            "slide_11": {
+                "img": "/images/allCourse/WFA-5-11.jpg"
+            },
+            "slide_12": {
+                "img": "/images/allCourse/WFA-5-12.jpg"
+            },
+            "slide_13": {
+                "img": "/images/allCourse/WFA-5-13.jpg"
+            },
+            "slide_14": {
+                "img": "/images/allCourse/WFA-5-14.jpg"
+            },
+            "slide_15": {
+                "img": "/images/allCourse/WFA-5-15.jpg"
+            },
+            "slide_16": {
+                "img": "/images/allCourse/WFA-5-16.jpg"
+            },
+            "slide_17": {
+                "img": "/images/allCourse/WFA-5-17.jpg"
+            },
+            "slide_18": {
+                "img": "/images/allCourse/WFA-5-18.jpg"
+            },
+            "slide_19": {
+                "img": "/images/allCourse/WFA-5-19.jpg"
+            }
+        },
+        "stage_6": {
+            "slide_1": {
+                "img": "/images/allCourse/WFA-6-1.jpg"
+            },
+            "slide_2": {
+                "img": "/images/allCourse/WFA-6-2.jpg"
+            },
+            "slide_3": {
+                "img": "/images/allCourse/WFA-6-3.jpg"
+            },
+            "slide_4": {
+                "img": "/images/allCourse/WFA-6-4.jpg"
+            },
+            "slide_5": {
+                "img": "/images/allCourse/WFA-6-5.jpg"
+            },
+            "slide_6": {
+                "img": "/images/allCourse/WFA-6-6.jpg"
+            },
+            "slide_7": {
+                "img": "/images/allCourse/WFA-6-7.jpg"
+            },
+            "slide_8": {
+                "img": "/images/allCourse/WFA-6-8.jpg"
+            },
+            "slide_9": {
+                "img": "/images/allCourse/WFA-6-9.jpg"
+            },
+            "slide_10": {
+                "img": "/images/allCourse/WFA-6-10.jpg"
+            },
+            "slide_11": {
+                "img": "/images/allCourse/WFA-6-11.jpg"
+            },
+            "slide_12": {
+                "img": "/images/allCourse/WFA-6-12.jpg"
+            },
+            "slide_13": {
+                "img": "/images/allCourse/WFA-6-13.jpg"
+            },
+            "slide_14": {
+                "img": "/images/allCourse/WFA-6-14.jpg"
+            }
+        },
+        "test": {
+            "slide_0": {
+                "img" : "/images/curs/step4/test.webp",
+                "title": "Now you will have to pass a Test",
+                "answer": "",
+                "content": "You must answer 17 from 20 questions in order to get the certificate. Please click next slide to start",
+                "bullets": [
+                ]
+            },
+            "slide_1": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "If a casualty has a burn, what must you never do?",
+                "answer": "c. Remove any clothing that has stuck to the burn",
+                "bullets": [
+                    "a. Cover the burned skin with cling film or a plastic bag",
+                    "b. Cool the affected body part with cool, running water",
+                    "c. Remove any clothing that has stuck to the burn"
+                ]
+            },
+            "slide_2": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "Before giving CPR, what should you do?",
+                "answer": "a. Call 999 for emergency help",
+                "bullets": [
+                    "a. Call 999 for emergency help",
+                    "b. Treat any visible injuries",
+                    "c. Put the casualty into the recovery position"
+                ]
+            },
+            "slide_3": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "Which regulations require employers to provide adequate first aid facilities, equipment, and personnel?",
+                "answer": "c. The Health and Safety (First-Aid) Regulations 1981",
+                "bullets": [
+                    "a. The Health and Safety at Work etc Act 1974",
+                    "b. The Health and Safety Information for Employees Regulations 1989",
+                    "c. The Health and Safety (First-Aid) Regulations 1981"
+                ]
+            },
+            "slide_4": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "When feeling for air on your cheek, how long should you wait to confirm that the breathing is rhythmic and normal?",
+                "answer": "c. 10 seconds",
+                "bullets": [
+                    "a. 60 seconds",
+                    "b. 90 seconds",
+                    "c. 10 seconds"
+                ]
+            },
+            "slide_5": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What is an auto-injector, such as an EpiPen, used to treat?",
+                "answer": "c. Anaphylaxis",
+                "bullets": [
+                    "a. Asthma",
+                    "b. Migraine",
+                    "c. Anaphylaxis"
+                ]
+            },
+            "slide_6": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What is an accident book used for?",
+                "answer": "a. Recording any first aid incidents that happen at work",
+                "bullets": [
+                    "a. Recording any first aid incidents that happen at work",
+                    "b. Recording the details of who the first aiders are",
+                    "c. Keeping track of first aid supplies and equipment"
+                ]
+            },
+            "slide_7": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "When should you put a casualty in the recovery position?",
+                "answer": "c. If they are breathing normally but are unresponsive",
+                "bullets": [
+                    "a. If they are not breathing normally and are responsive",
+                    "b. If they are not breathing and are unresponsive",
+                    "c. If they are breathing normally but are unresponsive"
+                ]
+            },
+            "slide_8": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "Recurrent seizures are a common symptom of which condition?",
+                "answer": "b. Epilepsy",
+                "bullets": [
+                    "a. Asthma",
+                    "b. Epilepsy",
+                    "c. Diabetes"
+                ]
+            },
+            "slide_9": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "During the secondary survey, which parts of the body should you examine for injury?",
+                "answer": "c. Examine the whole body from head to toe",
+                "bullets": [
+                    "a. Just the limbs and joints",
+                    "b. Focus on the abdomen and other soft parts",
+                    "c. Examine the whole body from head to toe"
+                ]
+            },
+            "slide_10": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "Which one of the following is a common symptom of an asthma attack?",
+                "answer": "c. Severe coughing and wheezing",
+                "bullets": [
+                    "a. Flushed, itchy skin",
+                    "b. Persistent headache",
+                    "c. Severe coughing and wheezing"
+                ]
+            },
+            "slide_11": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "The FAST acronym helps to identify a stroke, but what does FAST stand for?",
+                "answer": "b. Face, Arms, Speech, Time",
+                "bullets": [
+                    "a. Face, Airway, Speech, Tiredness",
+                    "b. Face, Arms, Speech, Time",
+                    "c. Face, Arteries, Speech, Time"
+                ]
+            },
+            "slide_12": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "What is the first step of the primary survey?",
+                "answer": "b. Danger",
+                "bullets": [
+                    "a. Breathing",
+                    "b. Danger",
+                    "c. Response"
+                ]
+            },
+            "slide_13": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "Which medication can help to thin the blood and reduce the damage to the heart during a heart attack?",
+                "answer": "a. Aspirin",
+                "bullets": [
+                    "a. Aspirin",
+                    "b. Paracetamol",
+                    "c. Ibuprofen"
+                ]
+            },
+            "slide_14": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "If a casualty has a minor wound and you need to apply a bandage, how can you protect yourself and the casualty from infection?",
+                "answer": "a. By wearing protective gloves",
+                "bullets": [
+                    "a. By wearing protective gloves",
+                    "b. By removing all foreign objects",
+                    "c. By rinsing the wound with warm water"
+                ]
+            },
+            "slide_15": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "Which of the following is an example of wet heat and which could cause a scald?",
+                "answer": "b. Steam",
+                "bullets": [
+                    "a. Fire",
+                    "b. Steam",
+                    "c. The sun"
+                ]
+            },
+            "slide_16": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "Which type of head injury is least likely to require hospital treatment?",
+                "answer": "a. Concussion",
+                "bullets": [
+                    "a. Concussion",
+                    "b. Cerebral compression",
+                    "c. A severe wound"
+                ]
+            },
+            "slide_17": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "If a person with diabetes is showing signs of hypoglycemia, what should you do?",
+                "answer": "c. Give them something sugary, preferably a liquid",
+                "bullets": [
+                    "a. Give them a dose of insulin",
+                    "b. Ask them to walk around and keep active",
+                    "c. Give them something sugary, preferably a liquid"
+                ]
+            },
+            "slide_18": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "If a casualty has a spinal injury, what must you do?",
+                "answer": "c. Support the casualty’s head and prevent them from moving",
+                "bullets": [
+                    "a. Help the casualty to sit up against a wall",
+                    "b. Move the casualty into a more comfortable position",
+                    "c. Support the casualty’s head and prevent them from moving"
+                ]
+            },
+            "slide_19": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "If a person has a sprain and the area is swollen, what should you apply to the injury?",
+                "answer": "a. A cool compress",
+                "bullets": [
+                    "a. A cool compress",
+                    "b. Gentle force with both hands",
+                    "c. A hot compress"
+                ]
+            },
+            "slide_20": {
+                "img": "/images/curs/step4/test.webp",
+                "title": "When should CPR NOT be given?",
+                "answer": "c. If the casualty has stopped breathing",
+                "bullets": [
+                    "a. If the casualty is breathing normally",
+                    "b. If the casualty isn’t breathing normally",
+                    "c. If the casualty has stopped breathing"
+                ]
+            }
+        }
+    }
+}

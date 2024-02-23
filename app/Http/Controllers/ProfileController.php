@@ -84,8 +84,7 @@ class ProfileController extends Controller
             if (Hash::check($request->oldPassword, $oldPassword[0]->password)){
                 $hashed = Hash::make($request->newPassword);
                 $user->update([
-                   'password'=>$hashed,
-                   'unHashedPassword'=>$request->newPassword
+                   'password'=>$hashed
                 ]);
                 return back()->with('success', 'Password has been updated');
             }else{

@@ -88,7 +88,9 @@ class CertificateController extends Controller
         $dompdf = new Dompdf($options);
         $dompdf->setPaper('letter', 'landscape');
         $certificate = DB::select("SELECT *, certificates.created_at as valid_from FROM certificates JOIN packages ON certificates.package_id = packages.id WHERE certificates.id =" . $certificateCreated->id);
-        $dompdf->loadHtml(view('pages.back.certificateAttach', compact('certificate', 'holder'))->render());
+        $package     = Package::find($certificate[0]->package_id);
+        $image       = $package->product_id;
+        $dompdf->loadHtml(view('pages.back.certificateAttach', compact('certificate', 'holder','image'))->render());
         $dompdf->render();
         $output = $dompdf->output();
         $pdfFilePath = tempnam(sys_get_temp_dir(), 'pdf_');
@@ -115,7 +117,11 @@ class CertificateController extends Controller
 
         $holder      = User::find($certificate[0]->user_id);
 
-        $data        = ['certificate' => $certificate, 'holder' => $holder];
+        $package     = Package::find($certificate[0]->package_id);
+
+        $image       = $package->product_id;
+
+        $data        = ['certificate' => $certificate, 'holder' => $holder, 'image' => $image];
 
         $pdf         = Pdf::loadView('pages.back.generateCertificate', $data);
 

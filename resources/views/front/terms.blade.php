@@ -8,7 +8,7 @@
     <div class="infoText">
         <h1>Terms and Conditions</h1>
 
-        <p>Welcome to Online Irish Manual Handling Training! These terms and conditions outline the rules and regulations for the
+        <p>Welcome to Online Ireland Safety Training ! These terms and conditions outline the rules and regulations for the
             use of our website, <a href="https://www.irish-manualhandling.com/" style="color: blue" target="_blank">https://www.irish-manualhandling.com/</a> (hereafter referred to as "the Site"). By accessing this website, we assume you accept these terms and conditions in full. Do not continue to use our website if you do not accept all of the terms and conditions stated on this page.</p>
 
         <h2 style="margin-top: 20px">Company Information:</h2>

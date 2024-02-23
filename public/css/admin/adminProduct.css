@@ -121,8 +121,77 @@
     color: #333;
 }
 
-@media only screen and (max-width: 1400px) {
-    .adminProducts{
+
+@media screen and (max-width: 1200px) and (min-width: 768px){
+    .side{
+        display: none;
+    }
+    .adminProductsBack{
         grid-template-columns: 1fr;
+    }
+    .adminContent{
+        width: 100%;
+    }
+    .adminWrap{
+        width: 100%;
+        padding-bottom: 100px;
+    }
+    .hamButtonAdmin{
+        display: flex;
+    }
+    .errorPhoto a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .errorPhoto a img{
+        width: 80%;
+    }
+    #stripeLogo{
+        display: none;
+    }
+    #hideText{
+        display: none;
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 250px){
+    .errorPhoto a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .errorPhoto a img{
+        width: 80%;
+    }
+    .side{
+        display: none;
+    }
+    .adminContent{
+        width: 100%;
+    }
+    .adminWrap{
+        width: 100%;
+        padding-bottom: 100px;
+    }
+    .hamButtonAdmin{
+        display: flex;
+    }
+    #stripeLogo{
+        display: none;
+    }
+    #hideText{
+        display: none;
+    }
+    .desktopShowNav{
+        display: none;
+    }
+    .adminProductsBack{
+        grid-template-columns: 1fr;
+    }
+    .mobileHideNav{
+        display: flex;
+    }
+    #stripeLogo{
+        display: none;
     }
 }

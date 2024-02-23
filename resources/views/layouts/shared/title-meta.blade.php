@@ -1,6 +1,6 @@
 <meta charset="utf-8" />
-<title>Manual Handling Course ✅ Online Training & Certificate ✅ Only €25</title>
-    <meta name="description" content="Discover Our Fully Online Manual Handling Course! ⭐️ Average Duration: 1 Hour ⭐️ Digital Certificate Provided ⭐️ Unlimited Exam Attempts ⭐️ Recognized in Ireland, UK, and Across Europe ⭐️ Valid for 3 Years">
+<title>Ireland Safety Training - Online Safety Courses with Certificates</title>
+    <meta name="description" content="Discover Our Fully Online Safety Courses and Training ⭐️ Average Duration: 1 Hour ⭐️ Digital Certificate Provided ⭐️ Unlimited Exam Attempts ⭐️ Recognized in Ireland, UK, and Across Europe">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta content="A fully responsive admin theme which can be used to build CRM, CMS,ERP etc." name="description" />

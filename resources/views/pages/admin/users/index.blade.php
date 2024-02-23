@@ -37,7 +37,6 @@
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Phone</th>
-                                        <th>Password</th>
                                         <th>Registered By</th>
                                     </tr>
                                     </thead>
@@ -65,7 +64,6 @@
                                             @else
                                                 <td>No record</td>
                                             @endif
-                                            <td>{{Illuminate\Support\Str::limit($user->unHashedPassword, 30, '...')}}</td>
                                             <td>{{$user->registeredBy}}</td>
                                         </tr>
                                     @endforeach
