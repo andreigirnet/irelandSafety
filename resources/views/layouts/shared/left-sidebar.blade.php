@@ -94,7 +94,7 @@
                     <span style="font-size: 18px"> Certificates </span>
                 </a>
             </li>
-          
+
 
 {{--            <li class="side-nav-item">--}}
 {{--                <a data-bs-toggle="collapse" href="#sidebarPagesAuth" aria-expanded="false"--}}
@@ -351,7 +351,6 @@
 
         </ul>
         <!--- End Sidemenu -->
-    <div style="position: absolute; bottom: 30px" id="stripeLogo"><img src="{{asset('images/brands/stripe.webp')}}" alt="" style="width: 235px"></div>
         <div class="clearfix"></div>
     </div>
 </div>

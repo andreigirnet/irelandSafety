@@ -116,6 +116,21 @@
     cursor: pointer;
     font-size: 16px;
 }
+
+.homeInfoCourseButton{
+    width: 130px;
+    height: 41px;
+    border-radius: 7px;
+    background: #fce001;
+    color: var(--textTitle);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
 .homeDownloadButton{
     width: 175px;
     height: 40px;

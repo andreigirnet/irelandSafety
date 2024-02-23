@@ -30,8 +30,15 @@
 }
 .allItemsInCart{
     display: flex;
-    align-items: center;
+    align-items: start;
     column-gap: 10px;
+    row-gap: 10px;
+    flex-direction: column;
+}
+.itemCheckoutList{
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
 }
 .orderDetailLeft{
     font-weight: bold;

@@ -3,6 +3,7 @@
 use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,10 @@ use App\Http\Controllers\RoutingController;
 
 
     //Front end routes, User experience
-    Route::get('/', function(){return view("front.landing");})->name('frontHome');
+    Route::get('/', function(){
+        $products = Product::orderBy('id', 'asc')->get();
+        return view("front.landing", compact('products'));
+    })->name('frontHome');
     Route::get('/terms', function(){return view("front.terms");})->name('terms');
     Route::get('/products', function(){return view("front.products");})->name('front.products');
     Route::get('/team', function(){return view("front.teamTraining");})->name('front.team');
@@ -47,7 +51,7 @@ Route::group(['prefix' => '/', 'middleware'=>'auth'], function () {
     Route::get('/cart', [App\Http\Controllers\BasketController::class,'index'])->name('basket.index');
     Route::get('/cart/get', [App\Http\Controllers\BasketController::class,'getCartItems'])->name('basket.get');
     Route::post('/cart/add/', [App\Http\Controllers\BasketController::class,'store'])->name('basket.store');
-    Route::delete('/cart/delete/', [App\Http\Controllers\BasketController::class,'destroy'])->name('basket.delete');
+    Route::delete('/cart/delete/{item}', [App\Http\Controllers\BasketController::class,'destroy'])->name('basket.delete');
     Route::post('/add/cart', [App\Http\Controllers\BasketController::class,'store'])->name('basket.add');
     Route::put('/cart/update/{item}', [App\Http\Controllers\BasketController::class,'update'])->name('update.cart');
     Route::post('/cart/add/discount', [App\Http\Controllers\BasketController::class,'applyDiscount'])->name('add.discount');
@@ -143,6 +147,11 @@ Route::group(['prefix' => '/', 'middleware'=>'auth'], function () {
         Route::get('/admin/search/certificate', [App\Http\Controllers\CertificateController::class,'searchCertificate'])->name('certificates.admin.search');
 
         Route::get('/search', [App\Http\Controllers\UserController::class,'search'])->name('user.search');
+
+        Route::get('/add/product', [App\Http\Controllers\ProductController::class,'create'])->name('admin.create.product');
+        Route::post('/add/product', [App\Http\Controllers\ProductController::class,'store'])->name('admin.add.product');
+        Route::get('/edit/product/{product}', [App\Http\Controllers\ProductController::class, 'edit'])->name('admin.edit.product');
+        Route::post('/update/product/{product}', [App\Http\Controllers\ProductController::class, 'update'])->name('admin.update.product');
 
     });
 

@@ -31,9 +31,10 @@
             this.cartTotalQty+=1;
             axios.put('/cart/update/' + id,
             {
-            quantity: this.cartTotalQty
+            quantity: this.cartItems[id].quantity + 1
             }).then(response => {
 	            this.checkSale()
+	            console.log(this.cartItems)
             }).catch(error => {
                 console.error(error);
             });
@@ -43,7 +44,7 @@
                 this.cartTotalQty-=1;
                 axios.put('/cart/update/' + id,
                 {
-                quantity: this.cartTotalQty
+                 quantity: this.cartItems[id].quantity - 1
                 }).then(response => {
                    this.checkSale()
                 }).catch(error => {
@@ -77,9 +78,8 @@
                 });
             }
          }
-         }" x-init="cartGetItems" style="row-gap: 20px">
+         }" x-init="cartGetItems">
         <div class="adminHomePageTitle">Your Basket</div>
-        @if(!Cart::isEmpty())
         <table class="styled-table">
             <thead>
             <tr>
@@ -92,17 +92,17 @@
             </thead>
             <tbody>
             <template x-for="(cartItem, index) in cartItems">
-                <tr id="cartTableRow" class="cartRow" style="color: black">
-                    <td id="cartId" x-text="cartItem.id"></td>
-                    <td id="itemName" x-text="cartItem.title"></td>
-                    <td id="itemCost" x-text="cartItem.price"></td>
+                <tr id="cartTableRow" class="cartRow">
+                    <td id="cartId" x-text="cartItem.id" class="blackText"></td>
+                    <td id="itemName" x-text="cartItem.title" class="blackText"></td>
+                    <td id="itemCost" x-text="cartItem.price" class="blackText"></td>
                     <td class="qtyContainer">
                         <img class="qtyIcon" id="subQty" @click="subQty(index)"  src="{{asset('images/icons/minus.png')}}" alt="">
                         <input class="qtyInput" id="itemQty" x-model="cartItem.quantity" x-on:change="updateQty" type="number" min="0">
                         <img class="qtyIcon" id="addQty" @click="addQty(cartItem.hash)"  src="{{asset('images/icons/plus.png')}}" alt="">
                     </td>
                     <td>
-                        <form action="{{route('basket.delete')}}" method="POST">
+                        <form x-bind:action="'{{ route("basket.delete", "") }}/' + cartItem.hash" method="POST">
                             @csrf
                             @method('DELETE')
                             <button class="deleteIcon" type="submit"><img class="qtyIcon" src="{{asset('images/icons/bin.png')}}" alt=""></button>
@@ -116,31 +116,31 @@
             <div class="checkout">
                 <div class="noticeDiscount">
                     <div class="noticeDiscountHeader">Notice</div>
-                    <div class="noticeText">Please note that we offer a 10% discount on purchases of 10 or more courses by a company or employer.<br>
-                        Our payment system will automatically apply the discount when you add the required number of courses to your cart.
+                    <div class="noticeText">Please notice that we'll offer a 10% discount when a company / employer will purchase 10+ courses (bulk courses will also count).<br>
+                        Our payment system will apply the discount straight away when you add to your cart the amount of courses required.
                     </div>
                 </div>
                 <div >
-                    <div class="noticeDiscountHeader">For Your Attention</div>
-                    <div class="noticeText">Before proceeding with the payment, please double-check that the selected course/courses and quantities are correct.<br>
-                        If, by mistake, you have added extra courses to your basket that you do not need, kindly remove those items from your basket and begin again with the correct selection.
+                    <div class="noticeDiscountHeader blackText">For Your Attention</div>
+                    <div class="noticeText">Please, before you proceed with the payment, have a double check with the course/courses selected are the right ones you need and the quantity also.<br>
+                        If by mistake you added to your basket extra courses that you don't need, please delete the items from your basket and start it again with the right selection.
                     </div>
                 </div>
                 <div class="goToCheckOutWrap">
-                    <div class="cartSubTotal" style="color: black">
-                        <div class="totalText">Cart Sub-Total:</div>
-                        <div class="totalValue" x-text="cartSubTotal"></div>
-                        <div class="euro">€</div>
+                    <div class="cartSubTotal">
+                        <div class="totalText blackText" >Cart Sub-Total:</div>
+                        <div class="totalValue blackText" x-text="cartSubTotal"></div>
+                        <div class="euro blackText">€</div>
                     </div>
                     <div class="discount" x-show="showDiscount">
-                        <div class="totalText" style="color: red; font-weight: 600">Discount:</div>
-                        <div class="totalValue" style="color: red; font-weight: 600" x-text="discount"></div>
-                        <div class="euro" style="color: red; font-weight: 600">%</div>
+                        <div class="totalText" style="color: red">Discount:</div>
+                        <div class="totalValue" style="color: red" x-text="discount"></div>
+                        <div class="euro"  style="color: red">%</div>
                     </div>
-                    <div class="cartTotal" style="color: black">
-                        <div class="totalText">Cart Total:</div>
-                        <div class="totalValue" x-text="cartTotal"></div>
-                        <div class="euro">€</div>
+                    <div class="cartTotal">
+                        <div class="totalText blackText">Cart Total:</div>
+                        <div class="totalValue blackText" x-text="cartTotal"></div>
+                        <div class="euro blackText">€</div>
                     </div>
                     <div class="checkOutMessage"></div>
                     <a href="/" x-bind:href="cartTotalQty>0 ? '/checkout' : '/cart'" class="linkCheckOut"><button class="adminButton" type="submit">Check Out</button></a>
@@ -153,10 +153,6 @@
 
             </div>
         </div>
-        @else
-            <div class="textAdmin">No items in the cart</div>
-            <a href="/home" class="sale-button" >Buy a course here</a>
-        @endif
     </div>
 
     <script src="{{asset('js/cart.js')}}" defer></script>

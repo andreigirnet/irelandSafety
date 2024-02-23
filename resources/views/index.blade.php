@@ -57,55 +57,77 @@
             <a href="{{route('certificate.download', $certificateId[0]->id)}}" class="homeDownloadButton">Downloand Certificate</a>
         @endif
     </div>
-    <div class="productSection">
-        <div class="productWrapper">
-            <div class="product-img" id="productDashImg">
-                <img src="{{asset("images/products/productSmall.png")}}" height="420" width="327">
-            </div>
-            <div class="product-info">
-                <div class="product-text">
-                    <h1 style="color: #014a22">Manual Handling</h1>
-                    <img src="{{asset("images/products/saleOver.png")}}" id="overImgDash" alt="">
-                    <div class="product-info-icons">
-                        <div class="product-icons">
-                            <img src="images/icons/back-in-time.png" alt="">
-                            <div style="font-size: 21px" ><span style="font-weight: bold;">Duration:</span> 45 Minutes</span></div>
-                        </div>
-                        <div class="product-icons">
-                            <img src="images/icons/certificate.png" alt="">
-                            <div style="font-size: 21px" ><span style="font-weight: bold;">Certificate Validity:</span> 3 Years</div>
-                        </div>
-                        <div class="product-icons">
-                            <img src="images/icons/money.png" alt="">
-                            <div class="price">
-                                <span class="before-price">€39</span>
-                                <span class="after-price">€25</span>
+        <img src="{{asset("images/products/saleOver.png")}}" class="overImgDashBack" alt="">
+        <div class="adminProductsBack">
+            @foreach($products as $product)
+                @if($product->status == 0)
+                <div class="adminProductBack">
+                    <img src="{{asset('images/productAdd/'.$product->image)}}" alt="" class="adminProductImageBack">
+                    <div class="adminProductBottomBack">
+                        <div class="adminProductNameBack">{{$product->name}}</div>
+                        @if (!in_array($product->id, [13, 14, 15, 16]))
+                            <div style="color: #397b21; font-weight: bold" class="elearning">e-Learning Course</div>
+                        @endif
+                        <hr style="border: 1px solid gray; opacity: 0.8">
+                        <div class="product-info-icons">
+                            @if($product->id == 14)
+                                <div class="product-icons-back">
+                                    <img src="images/icons/back-in-time.png" alt="">
+                                    <div>Duration: {{$product->durationTraining}} Day(Half day)</div>
+                                </div>
+                            @else
+                                <div class="product-icons-back">
+                                    <img src="images/icons/back-in-time.png" alt="">
+                                    <div style="font-weight: 600; display: flex; align-items: center; column-gap: 5px">Duration: <span style="font-weight: 500">{{$product->durationTraining}} hours</span></div>
+                                </div>
+                            @endif
+                            <div class="product-icons-back">
+                                <img src="images/icons/certificate.png" alt="">
+                                <div style="font-weight: 600; display: flex; align-items: center; column-gap: 5px">Validity: <span style="font-weight: 500">{{$product->certificateValidity}} Years</span></div>
+                            </div>
+                            <div class="product-icons-back">
+                                <img src="images/icons/money.png" alt="">
+                                <div style="font-weight: bold"><del style="color: gray">{{round($product->price * 1.31)}} €</del> <span style="color: red; font-size: 20px">{{$product->price}} €</span></div>
                             </div>
                         </div>
+                        @if($product->status == 0)
+                            <form action="{{route('basket.add')}}" method="POST">
+                                @csrf
+                                <input type="hidden" value="{{$product->id}}" name="productId">
+                                <div class="productButtonsBack">
+                                    @if($product->description)
+                                        <a href="{{route('front.product', $product->id)}}" class="homeInfoCourseButton">Info</a>
+                                    @endif
+                                        <button type="submit" class="buttonProductAdminAddBack">Add To Basket</button>
+                                </div>
+                            </form>
+{{--                        @else--}}
+{{--                            <div class="productButtons">--}}
+{{--                                --}}{{--                                    <button type="submit" class="buttonProductAdminAdd">Coming Soon</button>--}}
+{{--                                @if($product->description)--}}
+{{--                                    <a href="{{route('front.product', $product->id)}}" class="homeStartCourseButton">Info</a>--}}
+{{--                                @endif--}}
+{{--                            </div>--}}
+                        @endif
                     </div>
                 </div>
-                <div class="product-price-btn">
-                    <a href="{{route('front.product',1)}}"><button type="button" class="buttonInfo" style="background: white;   border: 1px solid var(--yellowColor);color: black;">info</button></a>
-                    <form action="{{route('basket.add')}}" method="POST">
-                        @csrf
-                        <input type="hidden" value="1" name="productId">
-                        <button type="submit" class="sale-button" style="color: #414141">SHOP NOW</button>
-                    </form>
-                </div>
-            </div>
+                @endif
+            @endforeach
         </div>
-    </div>
-    <div class="langTitle">
-        <div class="languageText">When you start the course, you'll have the opportunity to choose from that 6 languages:</div>
-        <div class="languagesSection">
-            <img src="{{asset('images/flags/en.png')}}" alt="">
-            <img src="{{asset('images/flags/pl.png')}}" alt="">
-            <img src="{{asset('images/flags/ro.png')}}" alt="">
-            <img src="{{asset('images/flags/ru.png')}}" alt="">
-            <img src="{{asset('images/flags/sp.png')}}" alt="">
-            <img src="{{asset('images/flags/ukr.png')}}" alt="">
-        </div>
-    </div>
+        <div style=" bottom: 30px;" id="stripeLogo"><img src="{{asset('images/brands/stripe.webp')}}" alt="" style="width: 235px"></div>
+
+
+        {{--    <div class="langTitle">--}}
+{{--        <div class="languageText">When you start the course, you'll have the opportunity to choose from that 6 languages:</div>--}}
+{{--        <div class="languagesSection">--}}
+{{--            <img src="{{asset('images/flags/en.png')}}" alt="">--}}
+{{--            <img src="{{asset('images/flags/pl.png')}}" alt="">--}}
+{{--            <img src="{{asset('images/flags/ro.png')}}" alt="">--}}
+{{--            <img src="{{asset('images/flags/ru.png')}}" alt="">--}}
+{{--            <img src="{{asset('images/flags/sp.png')}}" alt="">--}}
+{{--            <img src="{{asset('images/flags/ukr.png')}}" alt="">--}}
+{{--        </div>--}}
+{{--    </div>--}}
 </div>
 <script src="{{asset('js/showModalRegisterEmployee.js')}}"></script>
 @endsection

@@ -11,7 +11,7 @@
 
 .language-picker {
     position: absolute;
-    top: 79px;
+    top: 72px;
     right: 10px;
     display: flex;
     align-items: center;
@@ -126,7 +126,7 @@ a{
     color: black;
 }
 #frontNav {
-    background: #111611; 
+    background: #111611;
     padding: 0 0px 0 20px;
     display: flex;
     justify-content: space-between;

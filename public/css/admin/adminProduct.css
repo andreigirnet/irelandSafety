@@ -1,0 +1,128 @@
+.adminProducts{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 50px;
+    padding-bottom: 50px;
+}
+.overImgDashBack{
+    margin-top: 30px;
+    width: 280px;
+}
+.adminProductsBack{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 50px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+.productButtons{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+.adminProduct{
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.adminProductBack{
+    width: 310px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.adminProductImage{
+     width: 300px;
+     height: 210px;
+     border-top-left-radius: 8px;
+     border-top-right-radius: 8px;
+ }
+.adminProductImageBack{
+    width: 310px;
+    height: 210px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.adminProductBottom{
+    padding: 15px;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    row-gap: 12px;
+
+}
+.adminProductBottomBack{
+    padding: 15px;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    row-gap: 3px;
+}
+.productButtonsBack{
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+}
+.adminProductName{
+    font-size: 19px;
+    font-weight: bold;
+}
+.adminProductNameBack{
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+.elearning{
+    font-size: 14px;
+}
+.blackText{
+    color: black;
+}
+.product-icons-back{
+    font-size: 14px;
+    color: black;
+    display: flex;
+    align-content: center;
+    column-gap: 10px;
+}
+.product-icons-back img{
+    width: 25px;
+
+}
+.buttonProductAdminAdd{
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding around the text */
+    font-size: 16px; /* Font size */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+}
+.buttonProductAdminAddBack{
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+}
+.adminProductPrice{
+    font-size: 28px; /* Set the font size */
+    color: #333;
+}
+
+@media only screen and (max-width: 1400px) {
+    .adminProducts{
+        grid-template-columns: 1fr;
+    }
+}

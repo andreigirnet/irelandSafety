@@ -111,11 +111,17 @@ class CheckoutController extends Controller
                 'payment_intent_client_secret' => $intent->client_secret
             ]);
         } else if ($intent->status == 'succeeded') {
-            # The payment didn’t need any additional actions and completed!
-            # Handle post-payment fulfillment
+            $cartItems = $this->cart->getDetails()->items;
+
+            $orderTitles = '';
+            foreach ($cartItems as $cartItem) {
+                $orderTitles .= $cartItem->title . ', ';
+            }
+            $orderTitles = rtrim($orderTitles, ', ');
+
             Order::create([
                 'user_id' => auth()->user()->id,
-                'product_name' => "Manual Handling",
+                'product_name' => $orderTitles,
                 'quantity' => $this->cart->sumItemsQuantity(),
                 'paid' => $this->cart->getTotal(),
                 'charge_id' => $intent->id,
@@ -127,17 +133,20 @@ class CheckoutController extends Controller
                 'status' => 'paid',
             ]);
 
-            for ($i = 0; $i < $this->cart->sumItemsQuantity(); $i++) {
-                $package = new Package();
-                $package->user_id = auth()->user()->id;
-                $package->course_name = "Manual Handling";
-                $package->status = "purchased";
-                $package->save();
+            foreach ($cartItems as $cartItem) {
+                for ($i = 0; $i < $cartItem->quantity; $i++) {
+                    $package = new Package();
+                    $package->product_id = $cartItem->id;
+                    $package->user_id = auth()->user()->id;
+                    $package->course_name = $cartItem->title; // Adjust property names based on your actual data structure
+                    $package->status = "purchased";
+                    $package->save();
+                }
             }
             $this->cart->clearItems();
-            
+
             Mail::to(auth()->user()->email)->send(new ConfirmPaymentMail());
-            
+
             $request->session()->flash('success', 'Payment has been received successfully');
             echo json_encode([
                 "success" => true

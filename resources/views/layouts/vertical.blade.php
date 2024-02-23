@@ -19,12 +19,15 @@
     <link rel="stylesheet" href="{{asset("css/admin/checkout.css")}}">
     <link rel="stylesheet" href="{{asset("css/admin/package.css")}}">
     <link rel="stylesheet" href="{{asset("css/admin/share.css")}}">
+    <link rel="stylesheet" href="{{asset("css/admin/adminProduct.css")}}">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/f5urckdwcwce4xjd072v2er6y33x3c23yw42dsugdzmgti41/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
     <style>
         [x-cloak] { display: none; }
     </style>
-    
+
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -32,7 +35,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MFVGXXGP');</script>
 <!-- End Google Tag Manager -->
-    
+
 </head>
 
 <body>
@@ -41,6 +44,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         @include('layouts.shared/topbar')
         @include('layouts.shared/left-sidebar')
+        <a href="/cart">
+            <div class="mobileCartContainer">
+                <div class="mobileCartCounter">
+                    @if(Cart::getDetails()->items_count)
+                        <div class="mobileCartItemCounter">{{Cart::getDetails()->items_count}}</div>
+                    @endif
+                </div>
+                <img src="{{asset('images/icons/cartSingle.png')}}" alt="">
+            </div>
+        </a>
 
         <div class="content-page">
             @if (session('success'))
@@ -93,12 +106,12 @@ var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);
 
     @vite(['resources/js/layout.js', 'resources/js/main.js'])
     <script src="js/hideAdminNav.js"></script>
-    
+
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFVGXXGP"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    
+
 </body>
 
 </html>

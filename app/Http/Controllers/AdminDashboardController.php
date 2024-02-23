@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Order;
 use App\Models\Package;
+use App\Models\Product;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -37,7 +38,8 @@ class AdminDashboardController extends Controller
     public function simpleUserIndex(){
         $userPackageId = DB::select("SELECT id FROM packages WHERE user_id=" . auth()->user()->id . " AND status='purchased' ORDER BY created_at DESC LIMIT 1;");
         $certificateId = DB::select("SELECT id FROM certificates WHERE user_id=" . auth()->user()->id . " ORDER BY created_at DESC LIMIT 1;");
-        return view('index')->with('userPackageId', $userPackageId)->with('certificateId', $certificateId);
+        $products = Product::orderBy('id', 'asc')->get();
+        return view('index', compact('products'))->with('userPackageId', $userPackageId)->with('certificateId', $certificateId);
     }
 
     /**

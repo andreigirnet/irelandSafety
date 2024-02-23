@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="{{asset("css/front/consulting.css")}}">
     <link rel="stylesheet" href="{{asset("css/front/login.css")}}">
     <link rel="stylesheet" href="{{asset("css/front/blog.css")}}">
+    <link rel="stylesheet" href="{{asset("css/admin/adminProduct.css")}}">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -54,7 +55,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 </head>
-<body x-data="app()">    
+<body x-data="app()">
 
 @include("frontIncludes/hamburger")
 @include("frontIncludes/responsiveNav")
