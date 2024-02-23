@@ -68,7 +68,8 @@ class BlogController extends Controller
 
         $blog->save();
 
-        $blogUrl = url("/blog/{$blog->slug}"); // Update this based on your blog URL structure
+        $blogUrl = url("/blog/{$blog->slug}");
+        $blogUrl = str_replace("http://", "https://", $blogUrl);// Update this based on your blog URL structure
         $sitemapPath = public_path('site-map.xml'); // Update this based on your actual sitemap path
 
         if (File::exists($sitemapPath)) {

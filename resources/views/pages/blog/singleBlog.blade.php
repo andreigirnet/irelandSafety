@@ -55,6 +55,9 @@
             <div class="imgSingleBlogContainer">
                 <img src="{{asset('images/blogImages/'. $blog->image)}}" alt="" class="singleBlogImage" >
             </div>
+            <div class="singleBlogTitleContainer" style="margin-top: 10px">
+                <p class="singleBogTitle" style="font-size: 20px; font-weight: 600"><span>Created at: </span>{{$blog->created_at}}</p>
+            </div>
             <div class="blogSingleContentContainer">
                 <div class="blogSingleContent">
                     {!! $blog->content !!}
