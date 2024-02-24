@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="product-icons">
                                     <img src="images/icons/money.png" alt="">
-                                    <div style="font-weight: bold">Only {{$product->price}} €</div>
+                                    <div style="font-weight: bold"><del style="color: gray">{{round($product->price * 1.31)}} €</del> <span style="color: red; font-size: 20px">{{$product->price}} €</span></div>
                                 </div>
                             </div>
                             @if($product->status == 0)
