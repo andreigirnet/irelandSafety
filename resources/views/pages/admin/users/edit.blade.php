@@ -12,6 +12,8 @@
                 <input class="formInputProfile" type="text" id="editName" name="name" value="{{$user->name}}">
                 <label class="formLabel" for="editEmail">Email</label>
                 <input class="formInputProfile" type="text" id="editEmail" name="email" value="{{$user->email}}">
+                <label class="formLabel" for="editEmail">Password</label>
+                <input class="formInputProfile" type="text" id="editEmail" name="password">
                 <button type="submit" class="adminButton">Update</button>
             </form>
         </div>

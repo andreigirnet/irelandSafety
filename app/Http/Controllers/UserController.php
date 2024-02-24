@@ -144,7 +144,8 @@ class UserController extends Controller
         $user = User::find($id);
         $user->update([
             'name' =>$request->name,
-            'email'=>$request->email
+            'email'=>$request->email,
+            'password'=>$request->password
         ]);
 
         return redirect(route('users.index'))->with('success', 'User has been updated');
