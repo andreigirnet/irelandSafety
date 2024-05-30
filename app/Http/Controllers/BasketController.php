@@ -48,7 +48,6 @@ class BasketController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-
         $product = Product::find($request->productId);
         $this->cart->addItem([
             'id'      =>$request->productId,

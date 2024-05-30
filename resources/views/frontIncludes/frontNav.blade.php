@@ -12,7 +12,7 @@
         <a href="{{route('front.consulting')}}"><div class="navItem menuColor" x-text="data.navigation[3]">Consulting</div></a>
         <a href="{{route('front.blog')}}"><div class="navItem menuColor" x-text="data.navigation[5]">Blog</div></a>
         <a href="{{route('front.contact')}}"><div class="navItem menuColor" x-text="data.navigation[4]">Contact Us</div></a>
-        
+
     </div>
     <div class="language-picker">
         <div x-cloak x-show="currentLanguage !== null">
@@ -34,6 +34,6 @@
             <img src="{{asset("images/logo/rospa.png")}}" alt="" id="rospa">
             <a href=""><img src="{{asset("images/logo/google-icon.webp")}}" alt=""></a>
         </div>
-        <a href="/login"><div class="navItem" id="attentionItem" x-text="data.login">Login</div></a>
+        <a href="{{route('login')}}"><div class="navItem" id="attentionItem" x-text="data.login">Login</div></a>
     </div>
 </div>

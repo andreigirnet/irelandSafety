@@ -28,6 +28,7 @@
             answerFeedback: [],
             showHideContent: true,
             showStartTest: false,
+            testDone: false,
             message: '',
             testAnswers: 0,
             tryAgainButton: false,
@@ -51,10 +52,12 @@
                     if(this.stage !== this.stageCount){
                         this.showNav = true
                     }else{
-                         this.showNav = false
+                        this.showNav = false
                     }
                 }else{
-                    this.showNav = true
+                    if(!this.testDone){
+                     this.showNav = true
+                    }
                 }
             },
             showBullets: function(){
@@ -75,6 +78,8 @@
                 this.showNav = false;
                 this.showEye = false;
                 this.video = true;
+                this.showProgress = true;
+                this.showProgressBar = false;
                 let videoPractice = document.getElementById('practiceVideo');
                 videoPractice.onended = (event) => {
                   console.log(
@@ -134,6 +139,7 @@
                     const percentageCorrect = (correctCount / this.correctAnswers.length) * 100;
 
                     if (percentageCorrect >= 70) {
+                        this.testDone = true;
                         this.tryAgainButton = false;
                         this.showVideo()
                         this.showHideLang = false;
@@ -145,6 +151,7 @@
                         this.wrongAnswersCount = this.answerFeedback.filter(feedback => !feedback.correct).length;
                         this.answers = true;
                         this.tryAgainButton = true;
+                        console.log(this.tryAgainButton + 'TRYAGAIN BUTTON');
                     }
                 }
             },
@@ -193,7 +200,7 @@
                          this.showNavButton();
                     }
                 }else{
-                this.stage = stage
+                    this.stage = stage
                     this.getStageSlides(stage)
                         this.showStartTest = false;
                         this.isActive = stage
@@ -206,6 +213,7 @@
                          this.slideCounter = 0;
                          slider.style.right = 0 + 'px';
                          this.showNavButton();
+
                     }
 
                     console.log('afterelse' + this.stage)
@@ -215,8 +223,6 @@
             },
             nextSlide: function()
              {
-             console.log(this.stage)
-             console.log(this.stageCount)
                 this.answer = false
                 let slider = document.getElementById('courseSlider');
                 this.slideCounter += this.containerWidth;
@@ -239,6 +245,7 @@
                     this.slideCounter = 0;
                     slider.style.right = 0 + 'px';
                 }
+
             },
             prevSlide: function()
             {
@@ -259,7 +266,7 @@
                  this.containerWidth = containerWidth;
             },
             selectCourse: function(){
-
+                console.log(this.productId);
                 if(this.productId === '1'){
                     if(this.language === 'english')
                     {
@@ -464,12 +471,12 @@
                 <div class="langItem" @click="setLanguage('romanian')"><img src="{{asset('/images/flags/ro.png')}}" alt=""></div>
                 <div class="langItem" @click="setLanguage('russian')"><img src="{{asset('/images/flags/ru.png')}}" alt=""></div>
                 <div class="langItem" @click="setLanguage('spanish')"><img src="{{asset('/images/flags/sp.png')}}" alt=""></div>
-                <div>|</div>
-                <div class="langText" id="hideNav">Hide nav bar</div>
-                <label class="switch" id="showHideNav">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
+{{--                <div>|</div>--}}
+{{--                <div class="langText" id="hideNav">Hide nav bar</div>--}}
+{{--                <label class="switch" id="showHideNav">--}}
+{{--                    <input type="checkbox">--}}
+{{--                    <span class="slider round"></span>--}}
+{{--                </label>--}}
             </div>
 
             <div class="progressBar" x-show="showProgressBar === 'freeze'">
@@ -490,7 +497,7 @@
             </div>
 
 
-            <div class="videoContainer" x-cloak x-show="video" >
+            <div class="videoContainer" x-cloak x-show="video">
                 <template x-if="productId === '1'">
                     <div class="testPass">
                         <video autoplay muted controls class="practicalVideo" id="practiceVideo">
@@ -527,14 +534,14 @@
                     </div>
                 </template>
                 <template x-if="productId === '2'">
-                    <div class="testPass">
+                    <div class="testPassHeights">
                         <iframe width="80%" height="650" src="https://www.youtube.com/embed/Aza-s-uuaY8" frameborder="0" allowfullscreen></iframe>
                         <div class="videoText">
                             <strong>Congratulations on completing the Working at Heights Training.</strong>
                             You are one step away from your certificate. Please watch the final video that provides a demonstration with brief information on how to wear a harness, front, side and back to secure yourself while working at heights.
                             <br><br>
                             Remember :all the information covered by this training it's for your safety first. You have 3 years free access to your course content and feel free to get back and review anytime you need it.
-                            <form x-bind:action="`/certificate/create/${packageId}`" method="POST" x-show="showProgressBar === 'freeze'" style="margin-top: 20px">
+                            <form x-bind:action="`/certificate/create/${packageId}`" method="POST" x-show="showProgressBar === false" style="margin-top: 20px">
                                 @csrf
                                 <input type="hidden" name="userId" value="{{auth()->user()->id}}">
                                 <input type="hidden" name="productId"  x-bind:value="productId">
@@ -553,7 +560,7 @@
                         Please do get in touch if we can be of any further assistance!<br><br>
                         Best regards<br>
 
-                        <form x-bind:action="`/certificate/create/${packageId}`" method="POST" x-show="showProgressBar === 'freeze'"  style="margin-top: 20px">
+                        <form x-bind:action="`/certificate/create/${packageId}`" method="POST" x-show="showProgressBar === false'"  style="margin-top: 20px">
                             @csrf
                             <input type="hidden" name="userId" value="{{auth()->user()->id}}">
                             <input type="hidden" name="productId"  x-bind:value="productId">
@@ -562,10 +569,10 @@
                     </div>
                 </template>
             </div>
-            <div class="courseContainer" id="courseContainer" x-on:landscape="setScreen">
+            <div class="courseContainer" id="courseContainer"  x-on:landscape="setScreen" >
                 <img id="eyeIcon" @click="showHideSlide" x-show="showEye" src="{{asset('images/icons/eye.png')}}" alt="Show hide image">
-                <div class="courseSlider" id="courseSlider" x-show="showSlider">
-                    <template x-for="(slide, index) in slides" :key="index">
+                <div class="courseSlider" id="courseSlider"  x-cloak x-show="showSlider">
+                    <template x-for="(slide, index) in slides"  :key="index">
                         <!-- The courseStage container is shown based on the current stage -->
                         <div class="courseStage" >
                             <!-- Each slide is rendered inside the courseStage container -->
@@ -610,7 +617,7 @@
                 </div>
             </div>
             <div class="navButtons">
-                <div class="navButton" x-show="showNav" @click="prevSlide">⬅️Previous</div>
+                <div class="navButton"  x-show="showNav" @click="prevSlide">⬅️Previous</div>
                 <template x-if="tryAgainButton">
                     <div class="tryAgainDiv">
                         <div class="answers">

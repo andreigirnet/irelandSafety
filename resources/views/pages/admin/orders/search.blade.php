@@ -48,7 +48,8 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @if($order)
+                                @if($orders)
+                                    @foreach($orders as $order)
                                         <tr style="color: black">
                                             <td class="actionRow">
                                                 <form action="{{route('order.admin.delete', $order->id)}}" method="POST">
@@ -62,7 +63,7 @@
                                             </td>
                                             <td>{{$order->id}}</td>
                                             <td class="hiddenRows">{{$order->created_at}}</td>
-                                            <td>{{$order->owner_email}}</td>
+                                            <td>{{$order->email}}</td>
                                             <td>{{$order->product_name}}</td>
                                             <td>{{$order->quantity}}</td>
                                             <td>{{$order->paid}}</td>
@@ -73,6 +74,7 @@
                                             <td class="hiddenRows">{{$order->country}}</td>
                                             <td><a href="{{route('invoice.download',$order->id)}}"><img class="invoiceLink" src="{{asset('images/icons/pdf.png')}}" alt=""></a></td>
                                         </tr>
+                                    @endforeach
                                 @else
                                     <td>No orders</td>
                                 @endif

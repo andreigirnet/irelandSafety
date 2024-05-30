@@ -6,32 +6,34 @@
             <!-- Topbar Brand Logo -->
             <div class="logo-topbar">
                 <!-- Logo light -->
-                <a href="" class="logo-light">
+                <span  class="logo-light">
                     <span class="logo-lg">
                         <img src="{{asset('images/login/registerLogin.jpg')}}" alt="logo">
                     </span>
                     <span class="logo-sm">
                         <img src="{{asset('images/login/smallLogo.png')}}" style="width: 80px" alt="small logo">
                     </span>
-                </a>
+                </span>
 
                 <!-- Logo Dark -->
-                <a href="" class="logo-dark">
-                    <span class="logo-lg">
+                <span class="logo-dark" id="showNavPanel" style="display:flex;">
+                    <span class="logo-lg" >
                         <img src="images/login/registerLogin.jpg" alt="dark logo">
                     </span>
                     <span class="logo-sm">
                         <img src="{{asset('images/login/smallLogo.png')}}"  style="width: 50px; height: 40px" alt="small logo">
                     </span>
-                </a>
+                </span>
             </div>
 
             <!-- Sidebar Menu Toggle Button -->
-            <button class="button-toggle-menu" style="display: flex;width: 164px; align-items: center; column-gap: 5px" id="hideNavSide">
+            <button class="button-toggle-menu" style="display: flex;width: 164px; align-items: center; column-gap: 5px">
                 <i class="ri-arrow-left-circle-fill desktopShowNav"></i>
                 <i class="ri-menu-unfold-fill mobileHideNav"></i>
                 <span id="hideText"> Hide the Taskbar</span>
             </button>
+
+
 
             <!-- Horizontal Menu Toggle Button -->
             <button class="navbar-toggle" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">

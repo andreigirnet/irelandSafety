@@ -5,9 +5,6 @@
     @include('layouts.shared/title-meta', ['title' => 'Log In'])
 
     @include('layouts.shared/head-css', ['mode' => $mode ?? '', 'demo' => $demo ?? ''])
-
-
-
 </head>
 
 <body class="authentication-bg position-relative">
@@ -66,7 +63,7 @@
                                                     placeholder="Enter your email" value="">
                                             </div>
                                             <div class="mb-3">
-                                                <a href="/forgot-password" class="text-muted float-end"><small>Forgot
+                                                <a href="{{route('password.request')}}" class="text-muted float-end"><small>Forgot
                                                         your
                                                         password?</small></a>
                                                 <label for="password" class="form-label">Password</label>
@@ -86,14 +83,7 @@
 
                                             <div class="text-center mt-4">
                                                 <div class="d-flex gap-2 justify-content-center mt-3">
-{{--                                                    <a href="javascript: void(0);" class="btn btn-soft-primary"><i--}}
-{{--                                                            class="ri-facebook-circle-fill"></i></a>--}}
-                                                    <!--<a href="{{route('google')}}"><img-->
-                                                    <!--        src="{{asset('images/google.png')}}" alt=""></a>-->
-{{--                                                    <a href="javascript: void(0);" class="btn btn-soft-info"><i--}}
-{{--                                                            class="ri-twitter-fill"></i></a>--}}
-{{--                                                    <a href="javascript: void(0);" class="btn btn-soft-dark"><i--}}
-{{--                                                            class="ri-github-fill"></i></a>--}}
+
                                                 </div>
                                             </div>
                                         </form>
@@ -108,7 +98,7 @@
             </div>
             <div class="row">
                 <div class="col-12 text-center">
-                    <p class="text-dark-emphasis" style="font-size: 18px">Don't have an account? <a href="/register"
+                    <p class="text-dark-emphasis" style="font-size: 18px">Don't have an account? <a href="{{route('register')}}"
                        class="text-dark fw-bold ms-1 link-offset-3 text-decoration-underline"><b>Sign up</b></a>
                     </p>
                 </div> <!-- end col -->

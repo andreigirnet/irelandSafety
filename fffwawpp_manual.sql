@@ -475,7 +475,6 @@ CREATE TABLE `users` (
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `google_id` varchar(500) DEFAULT NULL,
-  `unHashedPassword` varchar(255) DEFAULT NULL,
   `profilePic` varchar(255) DEFAULT NULL,
   `is_admin` tinyint(1) DEFAULT 0,
   `remember_token` varchar(100) DEFAULT NULL,

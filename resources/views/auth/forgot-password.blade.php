@@ -78,7 +78,7 @@
             </div>
             <div class="row">
                 <div class="col-12 text-center" style="font-size: 18px">
-                    <p class="text-dark-emphasis">Back To <a href="/login" class="text-dark fw-bold ms-1 link-offset-3 text-decoration-underline"><b>Log In</b></a></p>
+                    <p class="text-dark-emphasis">Back To <a href="{{route('login')}}" class="text-dark fw-bold ms-1 link-offset-3 text-decoration-underline"><b>Log In</b></a></p>
                 </div> <!-- end col -->
             </div>
             <!-- end row -->

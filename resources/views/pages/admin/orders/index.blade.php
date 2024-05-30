@@ -33,7 +33,7 @@
                                 <tr>
                                     <th>Action</th>
                                     <th>Order Id</th>
-                                    <th class="hiddenRows">Created At</th>
+                                    <th>Created At</th>
                                     <th>Owner</th>
                                     <th>Product Name</th>
                                     <th>Quantity</th>
@@ -61,7 +61,7 @@
                                                 <a href="{{route('order.edit', $order->id)}}" class="editLink"><img src="{{asset('images/icons/edit.png')}}" alt=""></a>
                                             </td>
                                             <td>{{$order->id}}</td>
-                                            <td class="hiddenRows">{{$order->created_at}}</td>
+                                            <td>{{$order->created_at}}</td>
                                             <td>{{$order->owner_email}}</td>
                                             <td>{{$order->product_name}}</td>
                                             <td>{{$order->quantity}}</td>

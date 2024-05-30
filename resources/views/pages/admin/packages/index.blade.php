@@ -4,10 +4,10 @@
     @include('layouts.shared/page-title', ['sub_title' => 'Menu', 'page_title' => 'Dashboard'])
     <div class="dashWrapper">
         <div class="adminHomePageTitle">All Packages</div>
-        <div class="landscape">
-            <img src="{{asset('images/banners/landscape.png')}}" alt="">
-            <div class="landscapeText">Please rotate your phone</div>
-        </div>
+{{--        <div class="landscape">--}}
+{{--            <img src="{{asset('images/banners/landscape.png')}}" alt="">--}}
+{{--            <div class="landscapeText">Please rotate your phone</div>--}}
+{{--        </div>--}}
         <div class="searchUser">
             <div class="searchText">Search for a Package</div>
             <form action="{{route('packages.admin.search')}}">

@@ -42,11 +42,15 @@ class OrderController extends Controller
 
     public function searchOrder(Request $request)
     {
-        $order= DB::select("SELECT *, orders.user_id as owner_id, (SELECT email FROM users WHERE id=owner_id) as owner_email FROM orders WHERE id=" . $request->id);
-        if ($order === []){
+        $searchQuery = $request->id;
+
+// Use the query builder to safely perform the query with LIKE
+        $orders = DB::select("SELECT orders.*, users.email FROM orders JOIN users ON orders.user_id = users.id WHERE users.email LIKE ? OR orders.id = ?", ['%' . $searchQuery . '%', $searchQuery]);
+
+        if ($orders === []){
             return redirect()->back()->with('success', 'No record has been found with this id');
         }
-            return view('pages.admin.orders.search')->with('order',$order[0]);
+            return view('pages.admin.orders.search')->with('orders',$orders);
     }
 
     /**

@@ -88,11 +88,6 @@ class UserController extends Controller
      * Display the specified resource.
      */
 
-    public function showIp(string $id)
-    {
-        $ips = Ip::where('user_id', $id)->get();
-        return view('pages.admin.users.ip', compact('ips'));
-    }
 
 
     public function show(string $id)
@@ -142,11 +137,19 @@ class UserController extends Controller
         ]);
 
         $user = User::find($id);
-        $user->update([
-            'name' =>$request->name,
-            'email'=>$request->email,
-            'password'=>$request->password
-        ]);
+        if($request->password){
+            $user->update([
+                'name' =>$request->name,
+                'email'=>$request->email,
+                'password'=>$request->password
+            ]);
+        }else{
+            $user->update([
+                'name' =>$request->name,
+                'email'=>$request->email
+            ]);
+        }
+
 
         return redirect(route('users.index'))->with('success', 'User has been updated');
     }

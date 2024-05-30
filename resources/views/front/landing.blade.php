@@ -72,16 +72,16 @@
                                 </div>
                             </div>
                             @if($product->status == 0)
-                                <form action="{{route('basket.add')}}" method="POST">
-                                    @csrf
-                                    <input type="hidden" value="{{$product->id}}" name="productId">
+{{--                                <form action="{{route('basket.add')}}" method="POST">--}}
+{{--                                    @csrf--}}
+{{--                                    <input type="hidden" value="{{$product->id}}" name="productId">--}}
                                     <div class="productButtons">
-                                        <button type="submit" class="buttonProductAdminAdd">Add To Basket</button>
+                                        <a href="{{route('home')}}" class="buttonProductAdminAdd">Add To Basket</a>
                                         @if($product->description)
                                             <a href="{{route('front.product', $product->id)}}" class="homeStartCourseButton">Info</a>
                                         @endif
                                     </div>
-                                </form>
+{{--                                </form>--}}
 {{--                            @else--}}
 {{--                                <div class="productButtons">--}}
 

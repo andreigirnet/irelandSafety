@@ -101,7 +101,7 @@
     @include('layouts.shared/footer-scripts')
 
     @vite(['resources/js/layout.js', 'resources/js/main.js'])
-    <script src="js/hideAdminNav.js"></script>
+    <script src="{{asset('js/hideAdminNav.js')}}"></script>
 
 
 

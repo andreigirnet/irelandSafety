@@ -53,7 +53,7 @@ class CertificateController extends Controller
         if ($certificate === []){
             return redirect()->back()->with('success', 'No record has been found with this id');
         }
-        return view('admin.admin.certificates.search')->with('certificate',$certificate[0]);
+        return view('pages.admin.certificates.search')->with('certificate',$certificate[0]);
     }
 
     /**
@@ -106,7 +106,11 @@ class CertificateController extends Controller
         $packageToUpdate->update([
             'certificate_id' => $certificateCreated->id
         ]);
-        return redirect()->back()->with('success','Certificate Generated');
+        if ($request->productId === 1) {
+            return redirect()->back()->with('success', 'Certificate Generated');
+        } else {
+            return redirect()->route('certificate.index')->with('success', 'Certificate Generated');
+        }
     }
 
     //Downloand certificate

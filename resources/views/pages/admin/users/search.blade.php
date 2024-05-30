@@ -55,7 +55,6 @@
                                             </form>
                                             <a href="{{route('user.edit', $user->id)}}" class="editLink"><img src="{{asset('images/icons/edit.png')}}" alt=""></a>
                                             <a href="{{route('user.info', $user->id)}}" class="editLink"><img src="{{asset('images/icons/info.png')}}" alt=""></a>
-                                            <a href="{{route('user.ip', $user->id)}}" class="editLink"><img src="{{asset('images/icons/ip-address.png')}}" alt=""></a>
                                         </td>
                                         <td>{{$user->id}}</td>
                                         <td>{{$user->created_at}}</td>
@@ -66,7 +65,6 @@
                                         @else
                                             <td>No record</td>
                                         @endif
-                                        <td>{{Illuminate\Support\Str::limit($user->unHashedPassword, 30, '...')}}</td>
                                         <td>{{$user->registeredBy}}</td>
                                     </tr>
                                 @endforeach

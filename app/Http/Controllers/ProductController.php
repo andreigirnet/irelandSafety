@@ -16,8 +16,8 @@ class ProductController extends Controller
      */
     public function index(): \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Foundation\Application
     {
-        $products = Product::orderBy('id', 'asc')->get();
-        return view('admin.administrator.products', compact('products'));
+//        $products = Product::orderBy('id', 'asc')->get();
+//        return view('pages.back.products', compact('products'));
     }
 
     public function info(): Response
@@ -32,7 +32,7 @@ class ProductController extends Controller
      */
     public function create(): \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Foundation\Application
     {
-        return view('admin.admin.products.create');
+        return view('pages.admin.products.create');
     }
 
     /**
@@ -60,7 +60,7 @@ class ProductController extends Controller
         ]);
 
         $product->save();
-        return redirect(route('admin.products'));
+        return redirect(route('home'));
     }
 
     /**
@@ -84,17 +84,36 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product): RedirectResponse
     {
-        $product->update([
-            'name' => $request->input('product_name'),
-            'durationTraining' => $request->input('duration'),
-            'certificateValidity' => $request->input('validity'),
-            'trainer' => $request->input('trainer'),
-            'status' => $request->input('status'),
-            'price' => $request->input('price'),
-            'description' => $request->input('description'),
-            // Add other fields as needed
-        ]);
-        return redirect(route('admin.products'))->with('success', 'Product updated successfully!');
+        if($request->image){
+            $imageName = time().'.'.$request->image->extension();
+            $request->image->move(public_path('images/productAdd'), $imageName);
+        }
+        if($request->image) {
+            $product->update([
+                'name' => $request->input('product_name'),
+                'durationTraining' => $request->input('duration'),
+                'certificateValidity' => $request->input('validity'),
+                'trainer' => $request->input('trainer'),
+                'image' => $imageName,
+                'status' => $request->input('status'),
+                'price' => $request->input('price'),
+                'description' => $request->input('description'),
+                // Add other fields as needed
+            ]);
+        }else{
+            $product->update([
+                'name' => $request->input('product_name'),
+                'durationTraining' => $request->input('duration'),
+                'certificateValidity' => $request->input('validity'),
+                'trainer' => $request->input('trainer'),
+                'status' => $request->input('status'),
+                'price' => $request->input('price'),
+                'description' => $request->input('description'),
+                // Add other fields as needed
+            ]);
+        }
+
+        return redirect(route('home'))->with('success', 'Product updated successfully!');
     }
 
     /**
