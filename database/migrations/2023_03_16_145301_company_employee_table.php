@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ips', function (Blueprint $table) {
+        Schema::create('company_employee', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id')->unsigned();
-            $table->text('ip');
-            $table->text('country');
+            $table->foreignId('company')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('employee')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -27,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ips');
+        Schema::dropIfExists('company_employee');
     }
 };
